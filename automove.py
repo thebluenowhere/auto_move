@@ -22,7 +22,7 @@ combined_data = {
             "ext": ["/*.docx", "/*.txt"]
         },
         "pic": {
-            "folder": "/home/eleynn/Pictures",
+            "folder": "/home/elevynn/Pictures",
             "ext": ["/*.jpg", "/*.png"]
         }
     }
