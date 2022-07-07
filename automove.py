@@ -28,18 +28,19 @@ combined_data = {
     }
 }
 
-src_folder = combined_data['src_folder']
-data = combined_data['move_data']
+def main():
+    src_folder = combined_data['src_folder']
+    data = combined_data['move_data']
+    move_files(src_folder, data)
 
-for item in data:
-    folder = data[item]["folder"]
-    exts = data[item]['ext']
-    for ext in exts:
-        files = glob.glob(src_folder + ext)
+def move_files(src_folder, data):
+    for item in data:
+        folder = data[item]["folder"]
+        exts = data[item]['ext']
+        for ext in exts:
+            files = glob.glob(src_folder + ext)
 
-        for file in files: 
-            file_name = os.path.basename(file)
-            shutil.move(file, folder)
-            print('Moved:', file)
-
-    
+            for file in files: 
+                file_name = os.path.basename(file)
+                shutil.move(file, folder)
+                print('Moved:', file)
