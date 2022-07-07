@@ -45,5 +45,5 @@ def move_files(src_folder, data):
                 shutil.move(file, folder)
                 print('Moved:', file)
 
-if(__name__ == __main__):
+if(__name__ == "__main__"):
     main()
