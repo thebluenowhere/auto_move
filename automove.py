@@ -34,13 +34,13 @@ def main():
     move_files(src_folder, data)
 
 def move_files(src_folder, data):
-    for item in data:
-        folder = data[item]["folder"]
-        exts = data[item]['ext']
+    for item, value in data.items():
+        folder = value['folder']
+        exts = value['ext']
         for ext in exts:
             files = glob.glob(src_folder + ext)
 
-            for file in files: 
+            for file in files:
                 file_name = os.path.basename(file)
                 shutil.move(file, folder)
                 print('Moved:', file)
