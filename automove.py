@@ -1,29 +1,35 @@
 import glob
 import os
 import shutil
+import json
+
+with open ('config.JSON') as config_file:
+    conf = json.load(config_file)
+username = conf['username']
+
 
 combined_data = {
-    "src_folder": "/home/elevynn/Downloads",
-    "move_data": {
-        "ebooks": {
-            "folder": "/home/elevynn/Ebooks",
-            "ext": ["/*.epub", "/*.mobi", "/*.azw3"]
+    'src_folder': f'/home/{username}/Downloads',
+    'move_data': {
+        'ebooks': {
+            'folder': f'/home/{username}/Ebooks',
+            'ext': ['/*.epub', '/*.mobi', '/*.azw3']
         },
-        "pdf": {
-            "folder": "/home/elevynn/Documents/PDF",
-            "ext": ["/*.pdf"]
+        'pdf': {
+            'folder': f'/home/{username}/Documents/PDF',
+            'ext': ['/*.pdf']
         },
-        "music": {
-            "folder": "/home/elevynn/Music",
-            "ext": ["/*.mp3", "/*.aac", "/*.FLAC", "/*.mp4"]
+        'music': {
+            'folder': f'/home/{username}/Music',
+            'ext': ['/*.mp3', '/*.aac', '/*.FLAC', '/*.mp4']
         },
-        "docs": {
-            "folder": "/home/elevynn/Documents",
-            "ext": ["/*.docx", "/*.txt"]
+        'docs': {
+            'folder': f'/home/{username}/Documents',
+            'ext': ['/*.docx', '/*.txt']
         },
-        "pic": {
-            "folder": "/home/elevynn/Pictures",
-            "ext": ["/*.jpg", "/*.png"]
+        'pic': {
+            'folder': f'/home/{username}/Pictures',
+            'ext': ['/*.jpg', '/*.png']
         }
     }
 }
@@ -45,5 +51,5 @@ def move_files(src_folder, data):
                 shutil.move(file, folder)
                 print('Moved:', file)
 
-if(__name__ == "__main__"):
+if(__name__ == '__main__'):
     main()
