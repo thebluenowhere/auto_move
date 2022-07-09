@@ -3,40 +3,13 @@ import os
 import shutil
 import json
 
-with open ('config.JSON') as config_file:
-    conf = json.load(config_file)
-username = conf['username']
+f = open('config.JSON')
 
-
-combined_data = {
-    'src_folder': f'/home/{username}/Downloads',
-    'move_data': {
-        'ebooks': {
-            'folder': f'/home/{username}/Ebooks',
-            'ext': ['/*.epub', '/*.mobi', '/*.azw3']
-        },
-        'pdf': {
-            'folder': f'/home/{username}/Documents/PDF',
-            'ext': ['/*.pdf']
-        },
-        'music': {
-            'folder': f'/home/{username}/Music',
-            'ext': ['/*.mp3', '/*.aac', '/*.FLAC', '/*.mp4']
-        },
-        'docs': {
-            'folder': f'/home/{username}/Documents',
-            'ext': ['/*.docx', '/*.txt']
-        },
-        'pic': {
-            'folder': f'/home/{username}/Pictures',
-            'ext': ['/*.jpg', '/*.png']
-        }
-    }
-}
+combined_library = json.load(f)
 
 def main():
-    src_folder = combined_data['src_folder']
-    data = combined_data['move_data']
+    src_folder = combined_library['src_folder']
+    data = combined_library['move_data']
     move_files(src_folder, data)
 
 def move_files(src_folder, data):
