@@ -3,7 +3,7 @@ import os
 import shutil
 import json
 
-f = open('config.JSON')
+f = open('config.json')
 
 combined_library = json.load(f)
 
