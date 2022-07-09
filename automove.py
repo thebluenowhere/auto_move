@@ -4,7 +4,6 @@ import shutil
 import json
 
 f = open('config.json')
-
 combined_library = json.load(f)
 
 def main():
