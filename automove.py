@@ -23,7 +23,6 @@ def move_files(src_folder, data):
                 shutil.move(file, folder)
                 print('Moved:', file)
                
-
 def new_entry():
     extension_list = []
     dir_name = input("What is the name of the file type? ")
