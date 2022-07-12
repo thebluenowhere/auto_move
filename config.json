@@ -1,42 +1,30 @@
 {
     "move_data": {
-        "docs": {
-            "ext": [
-                "/*.docx",
-                "/*.txt"
-            ],
-            "folder": "/home/elevensghost/Documents"
-        },
-        "ebooks": {
-            "ext": [
-                "/*.epub",
-                "/*.mobi",
-                "/*.azw3"
-            ],
-            "folder": "/home/elevensghost/Ebooks"
-        },
-        "music": {
-            "ext": [
-                "/*.mp3",
-                "/*.aac",
-                "/*.FLAC",
-                "/*.mp4"
-            ],
-            "folder": "/home/elevensghost/Music"
-        },
-        "pdf": {
-            "ext": [
-                "/*.pdf"
-            ],
-            "folder": "/home/elevensghost/Documents/PDF"
-        },
-        "pic": {
-            "ext": [
-                "/*.jpg",
-                "/*.png"
-            ],
-            "folder": "/home/elevensghost/Pictures"
-        }
+      "docs": {
+        "ext": ["/*.docx","/*.txt"],
+        "folder": "/home/elevensghost/Documents"
+      },
+
+      "ebooks": {
+        "ext": ["/*.epub","/*.mobi","/*.azw3"],
+        "folder": "/home/elevensghost/Ebooks"
+      },
+
+      "music": {
+        "ext": ["/*.mp3","/*.aac","/*.FLAC","/*.mp4"],
+        "folder": "/home/elevensghost/Music"
+      },
+
+      "pdf": {
+        "ext": ["/*.pdf"],
+        "folder": "/home/elevensghost/Documents/PDF"
+      },
+
+      "pic": {
+        "ext": ["/*.jpg","/*.png"],
+        "folder": "/home/elevensghost/Pictures"
+      }
+      
     },
     "src_folder": "/home/elevensghost/Downloads"
-}
+  }
