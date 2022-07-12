@@ -23,31 +23,5 @@ def move_files(src_folder, data):
                 shutil.move(file, folder)
                 print('Moved:', file)
 
-combined_data = {
-    'src_folder': f'/home/elevynn/Downloads',
-    'move_data': {
-        'ebooks': {
-            'folder': f'/home/elevynn/Ebooks',
-            'ext': ['/*.epub', '/*.mobi', '/*.azw3']
-        },
-        'pdf': {
-            'folder': f'/home/elevynn/Documents/PDF',
-            'ext': ['/*.pdf']
-        },
-        'music': {
-            'folder': f'/home/elevynn/Music',
-            'ext': ['/*.mp3', '/*.aac', '/*.FLAC', '/*.mp4']
-        },
-        'docs': {
-            'folder': f'/home/elevynn/Documents',
-            'ext': ['/*.docx', '/*.txt']
-        },
-        'pic': {
-            'folder': f'/home/elevynn/Pictures',
-            'ext': ['/*.jpg', '/*.png']
-        }
-    }
-}
-
 if(__name__ == '__main__'):
     main()
